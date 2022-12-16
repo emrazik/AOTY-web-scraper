@@ -5,6 +5,11 @@ class TextColors:
     END = '\u001b[0m'
 
 def handle_text_color(score):
+    if score == 'NR':
+        return TextColors.END
+    else:
+        score = int(score)
+
     if score > 70:
         return TextColors.GREEN
     elif score > 50:

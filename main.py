@@ -18,7 +18,6 @@ def main():
     parser.add_argument('-al', '--album', type=str, required=any(func in sys.argv for func in FUNCTIONS), help='Name of an album', metavar='')
     args = parser.parse_args()
 
-    print(args)
     if args.AS:
         options.album_search(args)
  
