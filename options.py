@@ -37,6 +37,10 @@ def album_search(args):
         color_code = config.handle_text_color(user_score)
         print('Users: ' + color_code + str(user_score) + config.TextColors.END + '\n')
 
+        # only print whats after this comment if the verbose flag is true
+        if not args.verbose:
+            sys.exit()
+
         # check whether the track list is available or not
         try:
             track_list_titles = html_parsed.find('table', {'class':'trackListTable'}).find('tbody').find_all('td', {'class':'trackTitle'})
@@ -52,3 +56,5 @@ def album_search(args):
 
             print(track_list_title + ': ' +  config.handle_text_color(track_list_rating) + track_list_rating + config.TextColors.END)
             
+def top_albums_all_time(args):
+    pass
