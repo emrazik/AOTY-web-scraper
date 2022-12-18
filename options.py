@@ -4,7 +4,7 @@ import playwright
 from playwright.sync_api import sync_playwright
 import sys
 
-def album_search(args):
+def album_search(args):    
     query_list = args.artist.split() + args.album.split()
 
     format_query = 'https://www.albumoftheyear.org/search/?q=%'
