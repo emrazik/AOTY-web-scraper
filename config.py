@@ -2,10 +2,10 @@ import options
 import sys
 
 FUNCTIONS = {'AS' : options.album_search,
-             'TA' : options.top_albums_all_time}
+             'YS' : options.top_albums_all_time}
 
 MAP_REQUIRE = {'AS' : ['artist', 'album'],
-               'TA' : ['year']}
+               'YS' : ['year']}
 
 class TextColors:
     GREEN = '\u001b[32m'
@@ -51,6 +51,3 @@ def check_required_args(arg_dict, key):
             return False
 
     return True
-
-
-        
